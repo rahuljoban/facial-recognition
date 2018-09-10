@@ -1,0 +1,26 @@
+<html style="overflow:hidden;">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <input type="button" class = "settings" value="Settings" onclick="window.location.href='index.html'">
+  <input type="button" class = "navigate" value="Go To: Create Account" onclick="window.location.href='CreateAccount.html'">
+  <div class = 'top'>
+
+    <p> Welcome to Class, lets get you started! </p>
+    <button id='detect' type='button'>Log In</button>
+  </div>
+  <div class="camera">
+      <video id="video">Video stream not available.</video>
+  </div>
+  <canvas id="canvas"></canvas>
+  <p id = 'log'>Logging in...</p>
+  <p id="response"></p>
+</body>
+  <script src="./scripts/jquery-2.2.2.min.js"></script>
+  <script>require('./scripts/LogIn.js');</script>
+  <script>require('./scripts/webcam.js');</script>
+</html>

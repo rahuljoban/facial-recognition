@@ -1,0 +1,34 @@
+<html style="overflow:visible;">
+<head>
+    <title>Class</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+  <body>
+    <div class = browserTop>
+      <p id = 'userName'>  </p>
+      <input type="button" id = "back" value="Go Back" onclick="window.location.href='LogIn.html'">
+      <input type="button" id = "complete" value="Course Complete">
+      <p id = 'courseID'> </p>
+      <input type="button" id = "downloads" value="Go To: Downloads Folder">
+    </div>
+    <div class = webView src = >
+      <div id="nav-body-ctrls"></div>
+      <div id="nav-body-tabs"></div>
+      <div id="nav-body-views"></div>
+    </div>
+  </body>
+  <script src="./scripts/jquery-2.2.2.min.js"></script>
+  <script>require('./scripts/WebView.js');</script>
+</html>
+<script>
+    var classURL = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.indexOf('&') - 1);
+    const ElectronNavigation = require('electron-navigation')
+    const enav = new ElectronNavigation()
+    enav.newTab(classURL);
+    $(function() {
+      $( ".nav-icons" ).css({
+        fill: 'whitesmoke',
+      });
+    });
+</script>

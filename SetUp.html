@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Person Group Setup</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+  <body>
+    <input type="button" value="Go Back" onclick="window.location.href='index.html'">
+    <p> This is the page to set up a student group for your organization</p>
+    <div class='wrapper'>
+      <form id='nameForm'>
+      <div class='form-uname'>
+          <lable id='nameLable' for='nameField'>Enter your company name:</lable>
+          <input id='nameField' type='text' maxlength='25'></input>
+      </div>
+      <div class='form-sub'>
+        <button id='subButton' type='button'>Print your name!</button>
+      </div>
+      </form>
+      <div>
+          <p id='result'></p></div>
+      </div>
+          <div>
+            <button id="detect">Create Person Group</button>
+          </div>
+
+          <script src="./scripts/jquery-2.2.2.min.js"></script>
+          <script>require('./scripts/SetUp.js');</script>
+  </body>
+
+</html>

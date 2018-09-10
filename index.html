@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Robostorm Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <input type="button" class = "navigate" value="Go To: Log In" onclick="window.location.href='LogIn.html'">
+    <p> Set the database for your location </p>
+    <form>
+      <input type="radio" name="database" value="bc-dunbar1">Dunbar<br>
+      <input type="radio" name="database" value="on-toronto">Toronto<br>
+      <input type="radio" name="database" value="test-branch">Test
+    </form>
+    <button id = submit> Submit </button>
+  </body>
+  <script src="./scripts/jquery-2.2.2.min.js"></script>
+  <script>
+    const settings = require('electron-settings');
+    $( "button#submit" ).on( "click", function() {
+      var database = $('input[name=database]:checked').val();
+      settings.set('database', {
+        database: database,
+      });
+      alert("Your database is set to: " + database)
+    });
+  </script>
+</html>

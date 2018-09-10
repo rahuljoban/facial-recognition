@@ -1,0 +1,27 @@
+<html style="overflow:hidden;">
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+  <body>
+    <input type="button" class = "settings" value="Settings" onclick="window.location.href='index.html'">
+    <input type="button" class = "navigate" value="Go To: Log In" onclick="window.location.href='LogIn.html'">
+    <div class = 'top'>
+      <p>Welcome to Robostorm! Let's get you an account</p>
+      <div id = 'name'>
+        <p>Enter your full name: </p>
+        <input id='nameField' type='text' maxlength='50'></input>
+      </div>
+      <button id='detect' type='button' width='150px'>Create Account</button>
+    </div>
+    <div class="camera">
+      <video id="video">Video stream not available.</video>
+    </div>
+    <canvas id="canvas"></canvas>
+    <p id="response"></p></div>
+  </body>
+  <script src="./scripts/jquery-2.2.2.min.js"></script>
+  <script>require('./scripts/CreateAccount.js');</script>
+</html>
